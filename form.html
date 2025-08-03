@@ -1,0 +1,125 @@
+<div id="datosTarjeta" class="datosTarjeta">
+                                <text id="literalesNUX" style="display: none;">
+                                    {"messageEnterCardNumber":"Introduce tu número de tarjeta","messageCardNumberError":"Introduce un número de tarjeta válido","messageExpiration":"Introduce la fecha de caducidad de tu
+                                    tarjeta","messageExpirationError":"Introduce una fecha de caducidad válida","messageCVV":"Introduce el código de seguridad (CVV) de tu tarjeta","messageCVVError": "Introduce un código de seguridad (CVV)
+                                    válido","messageCardholderName":"Introduce el nombre del titular de la tarjeta","messageSuccess":"Datos de tarjeta introducidos correctamente"}
+                                </text>
+                                <div id="card" class="card">
+                                    <div class="credit-card-group">
+                                        <div class="inputNewForm cardNewForm">
+                                            <label for="card-number" value="Número de tarjeta"></label><!--<span class="card-image"></span>-->
+                                            <input
+                                                id="card-number"
+                                                name="Sis_card-number"
+                                                type="tel"
+                                                inputmode="numeric"
+                                                class="card-number"
+                                                size="20"
+                                                lngid="altTarjeta"
+                                                placeholder="Número de tarjeta"
+                                                autofocus="autofocus"
+                                                autocomplete="cc-number"
+                                                float="right"
+                                                value=""
+                                            />
+                                            <span class="card-valid"></span>
+                                        </div>
+                                        <div class="cardInfo-container showInfo">
+                                            <div class="cardInfo hideInfo"><span class="card-instruction">Introduce tu número de tarjeta</span></div>
+                                        </div>
+                                        <div class="dataNewForm">
+                                            <div class="cadNewForm-container">
+                                                <div class="inputNewForm cadNewForm">
+                                                    <label for="card-expiration" value="Caducidad"></label><span class="calendar-image"></span>
+                                                    <input id="card-expiration" name="SIS_card-expiration" placeholder="Caducidad" type="tel" inputmode="numeric" class="card-expiration" autocomplete="cc-exp" pattern="[0-9]{4}" value="" />
+                                                    <span class="cad-valid"></span>
+                                                </div>
+                                                <div class="cad-info-container-responsive hideInfo"></div>
+                                            </div>
+                                            <input type="hidden" name="cvvObligatorio" class="cvvObligatorio" value="4" />
+                                            <div class="cvvNewForm-container">
+                                                <div class="inputNewForm cvvNewForm">
+                                                    <label for="card-cvv" value="CVV"></label><span class="cvv2-image"></span>
+                                                    <input
+                                                        id="card-cvv"
+                                                        name="Sis_Tarjeta_CVV2"
+                                                        type="tel"
+                                                        inputmode="numeric"
+                                                        class="card-cvv"
+                                                        size="4"
+                                                        lngid="codigoSeguridad"
+                                                        placeholder="CVV"
+                                                        autocomplete="cc-csc"
+                                                        pattern="[0-9]{0,4}"
+                                                        value=""
+                                                    />
+                                                    <span class="cvv-valid"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cad-cvv-info-container">
+                                            <div class="cadInfo hideInfo"></div>
+                                            <div class="cvvInfo hideInfo"></div>
+                                        </div>
+                                        <input autocomplete="cc-number" name="Sis_Numero_Tarjeta" id="cardNumber" type="hidden" /><input autocomplete="cc-exp-month" name="Sis_Caducidad_Tarjeta_Mes" id="expirationMonth" type="hidden" />
+                                        <input autocomplete="cc-exp-year" name="Sis_Caducidad_Tarjeta_Anno" id="expirationYear" type="hidden" />
+                                    </div>
+                                    <div class="checkConfirmSaveCardBox" id="confirmSaveCard">
+                                        <input class="checkNuevaUX" value="1" name="Sis_Confirm_SaveCard" id="Sis_Confirm_SaveCard" type="checkbox" />
+                                        <label aria-checked="false" tabindex="0" id="label_Sis_Confirm_SaveCard" for="Sis_Confirm_SaveCard" lngid="recordarTarjeta">
+                                            <div role="text" id="recordarTarjetaBox">
+                                                <p style="font-size: 13px;" class="checkConfirmCardText" name="textoAccept" id="textoAccept">
+                                                    <b class="boldText">Recordar esta tarjeta</b> como método de pago en este dispositivo/navegador.
+                                                </p>
+                                            </div>
+                                        </label>
+                                        <p class="checkConfirmCardText checkConfirmCardTextSize" name="textoAccept" id="textoAccept">
+                                            Al seleccionar esta opción, consiente el uso de cookies propias para esta finalidad. Puede consultar la Política de Cookies completa
+                                            <a href="javascript:abrirModal(&#39;ventanaPoliticaCookies&#39;)" tabindex="0">aquí* </a> .
+                                        </p>
+                                        <div class="infoPlazoxPago" id="infoPlazoxPago">
+                                            <text id="textoOfrecimientoPlazox">
+                                                <text class="textoInfoPlazox">
+                                                    <b>¡Divide el pago con plazox!</b>
+                                                    <div>Este comercio ofrece la posibilidad de<b>&nbsp;fraccionar el pago de tu compra sin papeleos y al instante&nbsp;</b>con tu entidad bancaria y plazox.</div>
+                                                </text>
+                                            </text>
+                                            <div class="logosPlazoxBox" id="logosPlazoxBox">
+                                                <div class="logosPlazoxPago" id="logosPlazoxPago">
+                                                    <div id="ofrecerPAE" name="ofrecerPAE">
+                                                        <img
+                                                            src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI4LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiCgkgdmlld0JveD0iMCAwIDI0NS4yOCA4Ny4zMSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjQ1LjI4IDg3LjMxOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6IzFGMUYxRjt9Cgkuc3Qxe2ZpbGw6I0ZFODY4MDt9Cgkuc3Qye2ZpbGw6I0M2QzZDNjt9Cjwvc3R5bGU+CjxnIGlkPSJEaXNlw7FvIj4KPC9nPgo8ZyBpZD0iSW5mbyI+Cgk8Zz4KCQk8Zz4KCQkJPGc+CgkJCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNy45NSw4Ni4wNmMtMy43LDAtNi43MS0zLjAxLTYuNzEtNi43MVY3Ljk1YzAtMy43LDMuMDEtNi43MSw2LjcxLTYuNzFoMjI5LjM4YzMuNywwLDYuNzEsMy4wMSw2LjcxLDYuNzEKCQkJCQl2NzEuNDFjMCwzLjctMy4wMSw2LjcxLTYuNzEsNi43MUg3Ljk1eiIvPgoJCQkJPHBhdGggY2xhc3M9InN0MSIgZD0iTTIzNy4zMywyLjQ4YzMuMDEsMCw1LjQ3LDIuNDUsNS40Nyw1LjQ3djcxLjQxYzAsMy4wMS0yLjQ1LDUuNDctNS40Nyw1LjQ3SDcuOTUKCQkJCQljLTMuMDEsMC01LjQ3LTIuNDUtNS40Ny01LjQ3VjcuOTVjMC0zLjAxLDIuNDUtNS40Nyw1LjQ3LTUuNDdIMjM3LjMzIE0yMzcuMzMsMEg3Ljk1QzMuNTYsMCwwLDMuNTYsMCw3Ljk1djcxLjQxCgkJCQkJYzAsNC4zOSwzLjU2LDcuOTUsNy45NSw3Ljk1aDIyOS4zOGM0LjM5LDAsNy45NS0zLjU2LDcuOTUtNy45NVY3Ljk1QzI0NS4yOCwzLjU2LDI0MS43MiwwLDIzNy4zMywwTDIzNy4zMywweiIvPgoJCQk8L2c+CgkJPC9nPgoJCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0xNzYuMzIsMjUuNGMtMS4wNS0wLjg1LTIuNTktMC42OS0zLjQ0LDAuMzZjMCwwLDAsMCwwLDBsLTExLjUzLDE0LjE3bC03LjY0LTkuMzkKCQkJYy0wLjg1LTEuMDUtMi40LTEuMjEtMy40NC0wLjM1Yy0xLjA1LDAuODUtMS4yMSwyLjQtMC4zNSwzLjQ0bDguMTksMTAuMDdsLTguMTksMTAuMDdjLTAuOTIsMC45OS0wLjg2LDIuNTQsMC4xNCwzLjQ2CgkJCWMwLjk5LDAuOTIsMi41NCwwLjg2LDMuNDYtMC4xNGMwLjA3LTAuMDgsMC4xNC0wLjE2LDAuMi0wLjI1bDcuNjQtOS4zOWwxMS41MywxNC4xN2MwLjg1LDEuMDUsMi4zOSwxLjIxLDMuNDQsMC4zNgoJCQlzMS4yMS0yLjM5LDAuMzYtMy40NGwtMTIuMDktMTQuODVsMTIuMDktMTQuODVDMTc3LjUyLDI3Ljc5LDE3Ny4zNiwyNi4yNSwxNzYuMzIsMjUuNGMtMC4wMSwwLTAuMDEsMC0wLjAxLDAgTTE4My4yNyw0My42NgoJCQlsMTYuMTItMTkuODNjMC44NS0xLjA1LDAuNjktMi41OS0wLjM2LTMuNDRjLTEuMDUtMC44NS0yLjU5LTAuNjktMy40NCwwLjM2bC0xNy4zNywyMS4zOGMtMC43MywwLjktMC43MywyLjE5LDAsMy4wOWwxNy4zOSwyMS4zNgoJCQljMC44NSwxLjA1LDIuMzksMS4yMSwzLjQ0LDAuMzZjMS4wNS0wLjg1LDEuMjEtMi4zOSwwLjM2LTMuNDRMMTgzLjI3LDQzLjY2eiBNMjIwLjU4LDQzLjY2bDQuNC01LjM4CgkJCWMwLjg4LTEuMDMsMC43NS0yLjU3LTAuMjctMy40NWMtMS4wMy0wLjg4LTIuNTctMC43NS0zLjQ1LDAuMjdjLTAuMDIsMC4wMy0wLjA1LDAuMDYtMC4wNywwLjA5bC01LjY0LDYuOTMKCQkJYy0wLjczLDAuOS0wLjczLDIuMTksMCwzLjA5bDUuNjQsNi45M2MwLjg1LDEuMDUsMi40LDEuMjEsMy40NCwwLjM1YzEuMDUtMC44NSwxLjIxLTIuNCwwLjM1LTMuNDRMMjIwLjU4LDQzLjY2eiBNMjEzLjYyLDI1LjQKCQkJYy0xLjA1LTAuODUtMi41OS0wLjY5LTMuNDQsMC4zNmMwLDAsMCwwLDAsMGwtMTMuMzIsMTYuMzdjLTAuNzMsMC45LTAuNzMsMi4xOSwwLDMuMDlsMTMuMzIsMTYuMzZjMC44MywxLjA3LDIuMzcsMS4yNiwzLjQzLDAuNDMKCQkJYzEuMDctMC44MywxLjI2LTIuMzcsMC40My0zLjQzYy0wLjAyLTAuMDMtMC4wNS0wLjA2LTAuMDctMC4wOWwtMTIuMDUtMTQuODNsMTIuMDYtMTQuODJDMjE0Ljg0LDI3Ljc5LDIxNC42OCwyNi4yNSwyMTMuNjIsMjUuNAoJCQlDMjEzLjYzLDI1LjQsMjEzLjYzLDI1LjM5LDIxMy42MiwyNS40IE0xMTUuMyw1My41aC0xNC4zN2MxLjUyLTEuODYsMy41NS00LjM0LDUuNzQtNy4yNmw4LjkxLTExLjg4CgkJCWMxLjAxLTEuMzUsMS4zNS0xLjk3LDEuMzUtMi43NmMwLTEuMDctMC43OS0xLjY5LTIuMTQtMS42OUg5Ni43OGMtMS4wNywwLjAyLTEuOTMsMC45LTEuOTIsMS45N2MtMC4wMSwxLjA1LDAuODMsMS45MSwxLjg4LDEuOTIKCQkJYzAuMDEsMCwwLjAyLDAsMC4wNCwwaDE0LjAyYy0xLjUyLDEuOC00LjA1LDQuOTUtNS44LDcuMjZsLTkuMDEsMTEuODhjLTEuMDEsMS4zNS0xLjM1LDEuOTctMS4zNSwyLjc2CgkJCWMwLDEuMDcsMC43OSwxLjY5LDIuMTQsMS42OWgxOC41MmMxLjA3LTAuMDIsMS45My0wLjksMS45Mi0xLjk3YzAuMDEtMS4wNS0wLjgzLTEuOS0xLjg4LTEuOTEKCQkJQzExNS4zMiw1My41LDExNS4zMSw1My41LDExNS4zLDUzLjUgTTEzMy4yNSw1My4yMmgtMC4xN2MtNS4zNSwwLTguMzMtMy4zOC04LjMzLTkuNTdzMi45OC05LjU3LDguMzMtOS41N2gwLjE3CgkJCWM1LjM1LDAsOC4zMywzLjM4LDguMzMsOS41N1MxMzguNiw1My4yMiwxMzMuMjUsNTMuMjIgTTEzMy4yNSwyOS40NmgtMC4xN2MtNy4zNywwLTEzLjQ1LDUuNTItMTMuNDUsMTQuMTkKCQkJczYuMDgsMTQuMTksMTMuNDUsMTQuMTloMC4xN2M3LjM4LDAsMTMuNDUtNS41MiwxMy40NS0xNC4xOVMxNDAuNjMsMjkuNDYsMTMzLjI1LDI5LjQ2IE04NC4xMiw1MC4yNWMwLDAuNjItMC4xMSwwLjg1LTAuNjIsMS4xMgoJCQljLTIuMywxLjItNC44NCwxLjg2LTcuNDMsMS45MmMtNC45LDAtNy45NC0yLjc2LTcuOTQtOS41N2MwLTYuNTksMy4wNC05LjY4LDguMjItOS42OGMyLjQ4LDAuMDcsNC45LDAuNzEsNy4wOSwxLjg2CgkJCWMwLjU2LDAuMjgsMC42NywwLjUxLDAuNjcsMS4xOEw4NC4xMiw1MC4yNXogTTg2LjU5LDI5Ljc0Yy0xLjM2LDAuMDEtMi40NiwxLjExLTIuNDgsMi40OHYwLjA1bC0xLjQxLTAuNzMKCQkJYy0yLjUzLTEuMzUtNC43My0yLjA4LTcuMjYtMi4wOGMtNi4xOSwwLTEyLjQ1LDUuMTgtMTIuNDUsMTQuMjhjMCw4LjMzLDQuOTUsMTQuMDcsMTIuMjIsMTQuMDdjMi40OCwwLDQuNTYtMC42Miw3LjMzLTIuMDgKCQkJbDEuNTctMC44NHYwLjE3YzAsMS4zNywxLjExLDIuNDgsMi40NywyLjQ4YzEuMzcsMCwyLjQ4LTEuMTEsMi40OC0yLjQ3YzAsMCwwLDAsMC0wLjAxVjMyLjE5Yy0wLjAxLTEuMzYtMS4xMS0yLjQ2LTIuNDgtMi40OAoJCQkgTTMyLjY3LDUzLjI3Yy0yLjU4LTAuMDctNS4xLTAuNzUtNy4zNy0xLjk3Yy0wLjQyLTAuMTctMC42OC0wLjYtMC42Mi0xLjA1VjM3LjEyYy0wLjA3LTAuNDYsMC4xOS0wLjksMC42Mi0xLjA3CgkJCWMyLjMxLTEuMjIsNC44Ny0xLjksNy40OS0xLjk3YzQuNDUsMCw3LjgyLDIuMzEsNy44Miw5LjU3QzQwLjYsNTEuMDgsMzcuMTcsNTMuMjcsMzIuNjcsNTMuMjcgTTMzLjY4LDI5LjQ2CgkJCWMtMi4zNywwLTQuNzMsMC43My03LjU1LDIuMjVsLTEuNDcsMC43OXYtMC4yOGMwLTEuMzctMS4xMS0yLjQ4LTIuNDctMi40OGMtMS4zNywwLTIuNDgsMS4xMS0yLjQ4LDIuNDdjMCwwLDAsMCwwLDB2MzIuNzYKCQkJYzAsMS4zNywxLjExLDIuNDgsMi40OCwyLjQ4YzEuMzcsMCwyLjQ4LTEuMTEsMi40OC0yLjQ4VjU0LjkxbDEuNTcsMC44NGMyLjY0LDEuNDEsNC45LDIuMDgsNy4zMywyLjA4CgkJCWM3LjI2LDAsMTIuMTYtNS42OSwxMi4xNi0xNC4xOUM0NS43MywzNS4wMyw0MC41LDI5LjQ2LDMzLjY4LDI5LjQ2IE01NC4zOSwxOS44NWMtMS4zNiwwLjAxLTIuNDYsMS4xMS0yLjQ4LDIuNDh2MzIuNzcKCQkJYzAsMS4zNywxLjExLDIuNDgsMi40OCwyLjQ4YzEuMzcsMCwyLjQ4LTEuMTEsMi40OC0yLjQ4VjIyLjNjLTAuMDEtMS4zNi0xLjExLTIuNDYtMi40OC0yLjQ4Ii8+Cgk8L2c+CjwvZz4KPC9zdmc+Cg=="
+                                                            alt="Pago Aplazado"
+                                                            class="plazoxLogo2B"
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div style="display: flex; cursor: pointer; gap: 5px;">
+                                                    <input
+                                                        type="button"
+                                                        id="infoPlazox"
+                                                        name="infoPlazox"
+                                                        onclick="javascript:abrirVentanaPAE(',182PAE,49PAE,2103PAE,198PAE,2095PAE,128,3058,2085,699,3081,3025PAE,3001PAE,3183PAE,128PAE,237,224,239PAE,73PAE');return false"
+                                                        class="icon-pae-help"
+                                                        value="¡"
+                                                    />
+                                                    <label style="display: block; cursor: pointer;" for="infoPlazox">¿Qué es plazox?</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="message hide" id="message01">Introduce un nÂº</div>
+                                <div id="iframe3DSMethod"></div>
+                                <input value="false" name="browserJavaEnabled" id="browserJavaEnabled" type="hidden" /><input value="true" name="browserJavascriptEnabled" id="browserJavascriptEnabled" type="hidden" />
+                                <input value="en-US" name="browserLanguage" id="browserLanguage" type="hidden" /><input value="24" name="browserColorDepth" id="browserColorDepth" type="hidden" />
+                                <input value="953" name="browserScreenHeight" id="browserScreenHeight" type="hidden" /><input value="1920" name="browserScreenWidth" id="browserScreenWidth" type="hidden" />
+                                <input value="420" name="browserTZ" id="browserTZ" type="hidden" />
+                                <input value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" name="browserUserAgent" id="browserUserAgent" type="hidden" />
+                                <input value="U" name="threeDSCompInd" id="threeDSCompInd" type="hidden" /><input type="hidden" name="fuc" value="352993679" /><input type="hidden" name="terminal" value="1" />
+                                <input type="hidden" name="merchantOrder" value="0323757z9374" />
+                                <div class="col-wr buttons-wr right">
+                                    <button class="btn btn-lg btn-cancel" type="button" id="divImgCancelar">Cancelar</button><button disabled="" class="btn btn-lg btn-accept" type="button" id="divImgAceptar">Pagar</button>
+                                </div>
+                            </div>
+                        </div>
